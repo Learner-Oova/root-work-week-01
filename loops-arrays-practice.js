@@ -11,3 +11,15 @@ console.log(firstName[(firstName.length - 1)]);
 for(let x = 0; x < firstName.length; x++){
     console.log(firstName[x]);
 }
+
+//3. Even Numbers
+let item = [4, 7, 10, 13, 16, 19, 22];
+console.log(`Even Numbers in the array ${item} are:`);
+for (let x = 0; x < item.length; x++){
+    if(item[x] % 2 === 0){
+        console.log(item[x]);
+    }
+    else{
+        continue;
+    }
+}
