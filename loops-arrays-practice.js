@@ -31,3 +31,17 @@ for(let x = 0; x < score.length; x++){
     total += score[x];
 }
 console.log(`Total scores = ${total}`);
+
+//5. Maximum score
+let max;
+let value = [12, 45, 7, 89, 23, 56];
+max = '';
+for (let x = 0; x < value.length; x++){
+    if(max > value[x]){
+        continue;
+    }
+    else{
+        max = value[x];
+    }
+}
+console.log(max);
