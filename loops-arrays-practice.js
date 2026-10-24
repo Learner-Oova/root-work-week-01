@@ -23,3 +23,11 @@ for (let x = 0; x < item.length; x++){
         continue;
     }
 }
+
+//4. Total score in an Array
+let total = 0;
+let score = [32, 43, 56, 66, 71];
+for(let x = 0; x < score.length; x++){
+    total += score[x];
+}
+console.log(`Total scores = ${total}`);
