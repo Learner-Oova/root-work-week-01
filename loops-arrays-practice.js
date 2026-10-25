@@ -56,3 +56,24 @@ state.unshift('Kano');
 console.log(state);
 state.shift('Kano');
 console.log(state);
+
+/* 
+Why are arrays useful?
+    They store many values of the same kind under one name, 
+    with each item accessible by its index. 
+    This keeps related data organized, avoids dozens of separate variables, 
+    and gives fast access to any element.
+
+Why loops and arrays work well together?
+    Array items sit in sequential, numbered positions, 
+    so a loop can walk through them with a counter (0, 1, 2, ...). 
+    One short block of code can then process every element, 
+    whether the array has 5 items or 5 million.
+
+Challenges: 
+    I learnt how to use the continue keyword to skip an item if it doesn't satisfy a condition,
+rather than terminate the loop.
+    I also spent a long time trying to crack the maximum array using loops, 
+    it was a success anyways.
+
+*/
