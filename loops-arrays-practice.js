@@ -45,3 +45,14 @@ for (let x = 0; x < value.length; x++){
     }
 }
 console.log(max);
+
+//Practice Array methods
+let state = ['Lagos', 'Osun', 'Abia'];
+state.push('Kano');
+console.log(state);
+state.pop('Kano');
+console.log(state);
+state.unshift('Kano');
+console.log(state);
+state.shift('Kano');
+console.log(state);
