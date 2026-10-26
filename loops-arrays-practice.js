@@ -35,7 +35,7 @@ console.log(`Total scores = ${total}`);
 //5. Maximum score
 let max;
 let value = [12, 45, 7, 89, 23, 56];
-max = '';
+max = 12;
 for (let x = 0; x < value.length; x++){
     if(max > value[x]){
         continue;
@@ -50,11 +50,11 @@ console.log(max);
 let state = ['Lagos', 'Osun', 'Abia'];
 state.push('Kano');
 console.log(state);
-state.pop('Kano');
+state.pop();
 console.log(state);
 state.unshift('Kano');
 console.log(state);
-state.shift('Kano');
+state.shift();
 console.log(state);
 
 /* 
