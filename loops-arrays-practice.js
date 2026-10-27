@@ -35,7 +35,7 @@ console.log(`Total scores = ${total}`);
 //5. Maximum score
 let max;
 let value = [12, 45, 7, 89, 23, 56];
-max = 12;
+max = value[0];
 for (let x = 0; x < value.length; x++){
     if(max > value[x]){
         continue;
