@@ -9,7 +9,7 @@ HOW THE index.js (even or odd) WORKS
 The 'let' keyword assigns a value to the variable x, and the 'if' is a conditional statement that uses the instruction x % 2 === 0, which means the remainder when x is divided by 2 is zero (% is an assignment operator that signifies remainder), the else is initiated if the remainder when x is divided by 2 is not zero.   
 NOTE: Even numbers are numbers that can be divided by 2 without a remainder.
 
-h1 Notes on task-manager.js
+NOTES ON task-manager.js
 
 WHAT THE PROGRAM DOES
 The application of this program can be likened to work for a tutorial that sets to see through a student progress on courses registered, the ones completed and he one pending before the student can be given final exams or a certificate.
