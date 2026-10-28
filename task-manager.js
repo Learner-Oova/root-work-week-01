@@ -50,3 +50,6 @@ let tasks = [
 for(let i = 0; i < tasks.length; i++){
     console.log(`task${i+1} includes: `, tasks[i]);
 }
+// Total tasks
+totalTasks = tasks.length;
+console.log('Total Number of tasks = ', totalTasks);
