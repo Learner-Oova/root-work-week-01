@@ -78,25 +78,22 @@ for(let i = 0; i < tasks.length; i++){
     }
 }
 
-// High priority tasks that are not completed
-if (totalHighPriority === 0){
-    console.log('There are no high priority tasks');
-}
-else {
-    for(let i = 0; i < tasks.length; i++){
-        if (tasks[i].priority === 'high'){
-            if (tasks[i].completed === false){
-                console.log(tasks[i].title);
-            }
-            else {
-                continue;
-            }
-        }
-        else {
-            continue;
+// If all high priority tasks are completed or not
+function highPriority(){
+    let highP = 0;
+    for (let i = 0; i < tasks.length; i++){
+        if(tasks[i].priority === true){
+            highP++;
         }
     }
+    if( highP === tasks.length){
+        console.log('All high priority tasks completed')
+    }
+    else {
+        console.log('There is still a pending high priority task')
+    }
 }
+highPriority();
 
 // Number of tasks with same category from a dataset
 for (let i = 0; i < tasks.length; i++){
@@ -106,7 +103,7 @@ for (let i = 0; i < tasks.length; i++){
         backendTasks++;
 }
 console.log('Total number of tasks under Frontend = ', frotendTasks)
-console.log('Total number of tasks under Frontend = ', backendTasks)
+console.log('Total number of tasks under Backend = ', backendTasks)
 
 // Functions of repeated groups
 
@@ -128,11 +125,29 @@ function displayTasks(){
     }
 }
 
-// Function for displaying specific task statistics
-function statsForTask(number){
-    console.log(`task${number+1} includes: `, tasks[number-1]);
+// Function for displaying task statistics
+function statsForTask(){
+    frotendTasks = 0;
+    backendTasks = 0;
+    databaseTasks = 0;
+    totalTasks = tasks.length;
+    console.log('Total Number of tasks = ', totalTasks);
+    for (let i = 0; i < tasks.length; i++){
+        if (tasks[i].category === 'Frontend'){
+            frotendTasks++;
+        }
+        if (tasks[i].category === 'Backend'){
+            backendTasks++;
+        }
+        if (tasks[i].category === 'Database'){
+            databaseTasks++;
+        }
+    }
+    console.log('Total number of tasks under Frontend = ', frotendTasks);
+    console.log('Total number of tasks under Backend = ', backendTasks);
+    console.log('Total number of tasks under Backend = ', databaseTasks);
 }
-statsForTask(5); // first task is 1, second task is 2 and so on
+statsForTask(); // first task is 1, second task is 2 and so on
 
 // Add a new task to array
 function addNewTask(newTask){
@@ -148,3 +163,4 @@ addNewTask(
 )
 console.log(tasks);
 taskcategory('Database'); // formally 1 before the addition of the new task
+highPriority();
