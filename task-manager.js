@@ -82,7 +82,7 @@ for(let i = 0; i < tasks.length; i++){
 function highPriority(){
     let highP = 0;
     for (let i = 0; i < tasks.length; i++){
-        if(tasks[i].priority === true){
+        if(tasks[i].completed === true){
             highP++;
         }
     }
@@ -163,4 +163,3 @@ addNewTask(
 )
 console.log(tasks);
 taskcategory('Database'); // formally 1 before the addition of the new task
-highPriority();
