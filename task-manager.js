@@ -127,27 +127,25 @@ function displayTasks(){
 
 // Function for displaying task statistics
 function statsForTask(){
-    frotendTasks = 0;
-    backendTasks = 0;
-    databaseTasks = 0;
-    totalTasks = tasks.length;
+    completed = 0;
+    pending = 0;
+    total = 0;
+    total = tasks.length;
     console.log('Total Number of tasks = ', totalTasks);
     for (let i = 0; i < tasks.length; i++){
-        if (tasks[i].category === 'Frontend'){
-            frotendTasks++;
+        if (tasks[i].completed === true){
+            completed++;
         }
-        if (tasks[i].category === 'Backend'){
-            backendTasks++;
-        }
-        if (tasks[i].category === 'Database'){
-            databaseTasks++;
+        else {
+            tasks[i].completed === false
+            pending++;
         }
     }
-    console.log('Total number of tasks under Frontend = ', frotendTasks);
-    console.log('Total number of tasks under Backend = ', backendTasks);
-    console.log('Total number of tasks under Backend = ', databaseTasks);
+    console.log('Total number of tasks  = ', total);
+    console.log('Total number of completed tasks = ', completed);
+    console.log('Total number of pending tasks = ', pending);
 }
-statsForTask(); // first task is 1, second task is 2 and so on
+statsForTask();
 
 // Add a new task to array
 function addNewTask(newTask){
