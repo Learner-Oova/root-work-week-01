@@ -2,7 +2,6 @@
 let completedTasks = 0;
 let pendingTasks = 0;
 let totalHighPriority = 0;
-let highPriorityPd = 0;
 let frotendTasks = 0;
 let backendTasks = 0;
 let databaseTasks = 0;
@@ -24,7 +23,7 @@ let tasks = [
     {
         title: 'Complete JavaScript tutorial',
         category: 'Frontend',
-        completed: false ,
+        completed: false,
         priority: 'high'
     },
     {
@@ -42,7 +41,7 @@ let tasks = [
     {
         title: 'Complete SQL tutorial',
         category: 'Database',
-        completed: false ,
+        completed: false,
         priority: 'high'
     }
 ];
@@ -79,21 +78,23 @@ for(let i = 0; i < tasks.length; i++){
 }
 
 // If all high priority tasks are completed or not
-function highPriority(){
+function highPriorityPd(){
     let highP = 0;
     for (let i = 0; i < tasks.length; i++){
-        if(tasks[i].completed === true){
-            highP++;
+        if(tasks[i].priority === 'high'){
+            if(tasks[i].completed === false){
+                highP++;
+            }
         }
     }
-    if( highP === tasks.length){
-        console.log('All high priority tasks completed')
+    if( highP === 0){
+        console.log('No pending high priority task');
     }
     else {
-        console.log('There is still a pending high priority task')
+        console.log('Total pending high priority task = ', highP);
     }
 }
-highPriority();
+highPriorityPd();
 
 // Number of tasks with same category from a dataset
 for (let i = 0; i < tasks.length; i++){
